@@ -23,4 +23,8 @@ public class Shirt extends ClothingItem {
     public String toString() {
         return super.toString() + ", Sleeve Type: " + sleeveType;
     }
+    @Override
+    public String getDetails() {
+    return "Shirt - Sleeve Type: " + sleeveType;
+}
 }

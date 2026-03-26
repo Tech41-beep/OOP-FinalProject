@@ -2,6 +2,7 @@ import java.awt.*;
 import java.util.List;
 import javax.swing.*;
 
+
 public class StyleHubGUI extends JFrame {
     private StoreManager store;
     private JTextArea displayArea;
@@ -12,6 +13,13 @@ public class StyleHubGUI extends JFrame {
         // sample data
         store.addItem(new Shirt("Oversize T-Shirt", 15.0, "M", 5, "Short Sleeve"));
         store.addItem(new Pants("Wide Leg Jeans", 25.0, "L", 3, "Loose Fit"));
+
+        store.addItem(new Shirt("Boxy", 30.0, "M", 5, "Short Sleeve"));
+        store.addItem(new Pants("Baggy Jeans", 25.0, "L", 3, "Loose Fit"));
+
+        store.addItem(new Shirt("Suit", 15.0, "M", 5, "Short Sleeve"));
+        store.addItem(new Pants("Jackets", 25.0, "L", 3, "Loose Fit"));
+
 
         setTitle("StyleHub - Buy and Sell Clothes System");
         setSize(700, 500);
@@ -104,5 +112,12 @@ public class StyleHubGUI extends JFrame {
             }
             displayArea.setText(sb.toString());
         });
+
+        JButton detailBtn = new JButton("Show Details");
+        panel.add(detailBtn);
+
+        detailBtn.addActionListener(e -> {
+         displayArea.setText(store.showItemDetails());
+});
     }
 }

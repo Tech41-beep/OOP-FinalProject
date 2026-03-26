@@ -23,4 +23,9 @@ public class Pants extends ClothingItem {
     public String toString() {
         return super.toString() + ", Fit Type: " + fitType;
     }
+
+    @Override
+    public String getDetails() {
+    return "Pants - Fit Type: " + fitType;
+}
 }

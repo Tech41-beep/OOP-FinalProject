@@ -57,4 +57,17 @@ public class StoreManager {
         }
         return null;
     }
+ //polymorphism to show details of each item based on its type
+ // This method demonstrates polymorphism by calling the getDetails() method on each ClothingItem, which will return different details based on whether it
+ // is a shirt or pant , without needing to know the type 
+    public String showItemDetails() {
+    StringBuilder sb = new StringBuilder();
+
+    for (ClothingItem item : items) {
+        // Polymorphism in action
+        sb.append(item.getDetails()).append("\n");
+    }
+
+    return sb.toString();
+}
 }

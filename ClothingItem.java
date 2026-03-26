@@ -49,13 +49,17 @@ public abstract class ClothingItem implements Discountable {
         this.stock = stock;
     }
 
-    public abstract String getCategory();
+    public abstract String getCategory() ;
+    
+    public String getDetails() {
+    return "Basic Clothing Item";
+}
 
     @Override
     public double applyDiscount(double percent) {
         return price - (price * percent / 100);
     }
-
+  
     @Override
     public String toString() {
         return "Name: " + name +
