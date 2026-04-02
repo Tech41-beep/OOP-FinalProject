@@ -3,7 +3,8 @@ public abstract class ClothingItem implements Discountable {
     private double price;
     private String size;
     private int stock; //Encapsulating stock variable
-
+ 
+    
     public ClothingItem(String name, double price, String size, int stock) {
         this.name = name;
         setPrice(price);

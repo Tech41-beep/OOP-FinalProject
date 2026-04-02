@@ -1,5 +1,6 @@
 public class Shirt extends ClothingItem {
     private String sleeveType;
+    
 
     public Shirt(String name, double price, String size, int stock, String sleeveType) {
         super(name, price, size, stock);

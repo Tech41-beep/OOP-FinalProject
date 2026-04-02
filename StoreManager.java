@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class StoreManager {
+    //has a relationship with ClothingItem, as it manages a collection of clothing items in the store
+    //ArrayList: because it allows us to easily add, remove, and manage a dynamic list of clothing items without worrying about the underlying array size
     private ArrayList<ClothingItem> items = new ArrayList<>();
 
     public void addItem(ClothingItem item) {
@@ -67,7 +69,6 @@ public class StoreManager {
         // Polymorphism in action
         sb.append(item.getDetails()).append("\n");
     }
-
     return sb.toString();
 }
 }

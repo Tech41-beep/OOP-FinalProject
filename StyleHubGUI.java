@@ -11,6 +11,7 @@ public class StyleHubGUI extends JFrame {
         store = new StoreManager();
 
         // sample data
+        
         store.addItem(new Shirt("Oversize T-Shirt", 15.0, "M", 5, "Short Sleeve"));
         store.addItem(new Pants("Wide Leg Jeans", 25.0, "L", 3, "Loose Fit"));
 
@@ -28,7 +29,7 @@ public class StyleHubGUI extends JFrame {
 
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
-
+ 
         JButton showBtn = new JButton("Show Products");
         JButton buyBtn = new JButton("Buy Product");
         JButton sellBtn = new JButton("Sell Product");
